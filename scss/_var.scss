@@ -1,0 +1,70 @@
+//color-palette
+$black: #000000;
+$red_a-100: #ff9c7d;
+$deep_orange-500: #ff6336;
+$beige: #dabc98;
+$cyan-100: #c9e8f2;
+$amber-50: #fff8e4;
+$grey-400: #cccccc;
+$grey-300: #e5e5e5;
+$grey-200: #eeeeee;
+$amber-50: #fff8e4;
+$white: #ffffff;
+$blue-900: #000088;
+$green-600: #009900;
+$green-700: #339933;
+$green-900: #004000;
+$indigo_a-700: #0000ff;
+$deep-purple-200: #9876aa;
+
+// font-sizes
+$h1: 65px;
+$h2: 50px;
+$h3: 40px;
+$h4: 35px;
+$h5: 30px;
+$h6: 25px;
+$fs--exlg: 20px;
+$fs--lg: 18px;
+$fs--exmd: 17px;
+$fs--md: 16px;
+$fs--sm: 15px;
+$fs--small: 14px;
+$fs--exsm: 12px;
+
+// font-family
+$font-family: 'Graphik LCG', sans-serif;
+
+//containers
+$container-lg: 1338px;
+$container-md: 1290px;
+$container-space: 15px;
+
+// @media
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media (max-width: 1200px) {
+            @content;
+        }  
+    }
+    @else if $point == lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+        @else if $point == md {
+            @media (max-width: 768px) {
+                @content;
+            }  
+        }
+        @else if $point == sm {
+            @media (max-width: 576px) {
+                @content;
+            }  
+        }
+        @else if $point == xs {
+            @media (max-width: 320px) {
+                @content;
+            }  
+        }
+    }

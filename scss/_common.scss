@@ -1,0 +1,122 @@
+body {
+  font-family: $font-family;
+  color: $black;
+}
+
+.container {
+  max-width: calc($container-lg + $container-space * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include breakpoint(xl) {
+    max-width: calc(1200px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(lg) {
+    max-width: calc(992px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(md) {
+    max-width: calc(768px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(sm) {
+    max-width: calc(576px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(xs) {
+    max-width: calc(320px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+.section-container {
+  max-width: calc($container-md + $container-space * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include breakpoint(xl) {
+    max-width: calc(1200px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(lg) {
+    max-width: calc(992px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(md) {
+    max-width: calc(768px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(sm) {
+    max-width: calc(576px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include breakpoint(xs) {
+    max-width: calc(320px - 30px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and(max-width: 1320px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and(max-width: 910px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.flex-container-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 1152px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.flex-container__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

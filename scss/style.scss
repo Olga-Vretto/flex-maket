@@ -1,0 +1,877 @@
+@import "./reset";
+@import "./var";
+@import "./common";
+@import "./fonts";
+@import "./typography";
+@import "./button";
+@import "./footer";
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*header styling*/
+
+.header {
+  padding: 25px 0;
+  border-bottom: 2px solid $grey-400;
+  &__nav-logo {
+    @include flex;
+    align-items: center;
+    @include breakpoint(lg) {
+      margin-bottom: 20px;
+    }
+    @include breakpoint(sm) {
+      margin-bottom: 15px;
+    }
+  }
+  .logo {
+    margin-right: 51px;
+
+    &__svg {
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.nav-link {
+  color: $black;
+  display: inline-block;
+  margin-right: 57px;
+  &:hover {
+    color: $grey-400;
+  }
+  @media screen and (max-width: 1098px) {
+    margin-right: 35px;
+  }
+  @include breakpoint(md) {
+    padding: 10px;
+  }
+  @include breakpoint(sm) {
+    font-size: 16px;
+    padding: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+/* end of header tyling */
+
+/*main styling*/
+
+.main {
+  min-height: calc(100vh - 95px);
+  @include flex;
+  justify-content: space-between;
+  padding: 129px 0 172px;
+  @media screen and(max-width:1099px) {
+    padding: 60px 0 80px;
+  }
+}
+.main-content {
+  max-width: 520px;
+  @media screen and(max-width: 910px) {
+    max-width: 600px;
+    text-align: center;
+  }
+  &__title {
+    padding-bottom: 51px;
+    @include breakpoint(xl) {
+      font-size: 55px;
+      line-height: 60px;
+    }
+    @media screen and(max-width:1099px) {
+      max-width: 400px;
+      font-size: 50px;
+      padding-bottom: 20px;
+    }
+    @include breakpoint(lg) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @include breakpoint(md) {
+      font-size: 45px;
+      line-height: 55px;
+      padding-bottom: 20px;
+    }
+    @include breakpoint(sm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @include breakpoint(xs) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @media screen and(max-width: 910px) {
+      margin: auto;
+      max-width: 500px;
+    }
+  }
+}
+
+.main-content__txt {
+  max-width: 471px;
+  padding-bottom: 50px;
+  @include breakpoint(xl) {
+    font-size: 20px;
+    max-width: 400px;
+  }
+  @include breakpoint(lg) {
+    padding-bottom: 30px;
+  }
+  @media screen and(max-width: 910px) {
+    max-width: 800px;
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    font-size: 18px;
+  }
+}
+.main-content__btn {
+  margin-bottom: 25px;
+  @media screen and(max-width: 910px) {
+    margin-bottom: 15px;
+  }
+}
+.main-content__text {
+  @media screen and(max-width: 910px) {
+    margin-bottom: 15px;
+  }
+  @include breakpoint(sm) {
+    font-size: 14px;
+  }
+}
+
+.main-image {
+  max-width: 759px;
+  @media screen and (max-width: 1308px) {
+    max-width: 650px;
+  }
+  @include breakpoint(xl) {
+    max-width: 550px;
+  }
+  @include breakpoint(lg) {
+    max-width: 480px;
+  }
+  @media screen and(max-width: 910px) {
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+/*end of main styling*/
+
+/* section-companies (first) styling*/
+
+.section-companies {
+  padding: 108px 0 110px;
+  background-color: $red_a-100;
+  @include breakpoint(md) {
+    padding: 70px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 60px 0;
+  }
+  @include breakpoint(xs) {
+    padding: 50px 0;
+  }
+  &__title {
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 82px;
+    @include breakpoint(xl) {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include breakpoint(lg) {
+      font-size: 45px;
+      line-height: 50px;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(md) {
+      font-size: 40px;
+      line-height: 45px;
+      max-width: 450px;
+      margin-bottom: 35px;
+    }
+    @include breakpoint(sm) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    @include breakpoint(xs) {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}
+
+.company-svg {
+  @include flex;
+  justify-content: center;
+  &__icons {
+    margin-right: 103px;
+    @media screen and (max-width: 1274px) {
+      margin-bottom: 20px;
+    }
+    @include breakpoint(md) {
+      width: 25%;
+      margin: 30px 50px;
+    }
+    @include breakpoint(sm) {
+      margin: 0 20px 20px;
+    }
+  }
+  &__icon {
+    @include breakpoint(lg) {
+      margin: 0 20px;
+    }
+    @include breakpoint(md) {
+      width: 25%;
+      margin: 50px 20px;
+    }
+    @include breakpoint(sm) {
+      margin: 0 20px 20px;
+    }
+  }
+}
+
+/*end of section-companies (first) styling*/
+
+/* section-apps-project (second) styling*/
+
+.section-apps-project {
+  padding: 90px 0 150px;
+  @media screen and(max-width: 1320px) {
+    padding: 50px 0 0;
+  }
+
+  &__link {
+    color: $black;
+    &:hover {
+      color: $deep_orange-500;
+    }
+  }
+}
+
+.project {
+  @include flex;
+  align-items: center;
+
+  @media screen and(max-width: 1320px) {
+    justify-content: center;
+  }
+  &-first-box {
+    gap: 165px;
+    margin-bottom: 250px;
+    @media screen and (max-width: 1320px) {
+      margin-bottom: 100px;
+      gap: 45px;
+    }
+    @media screen and (max-width: 1226px) {
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+    @include breakpoint(xs) {
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+  }
+  &-box {
+    gap: 138px;
+    @media screen and (max-width: 1320px) {
+      margin-bottom: 100px;
+      gap: 45px;
+    }
+    @media screen and (max-width: 1226px) {
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+    @include breakpoint(xs) {
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 250px;
+      @media screen and (max-width: 1320px) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &-app {
+    @include breakpoint(xl) {
+      margin: auto;
+    }
+    &__link {
+      text-decoration: underline;
+      color: $black;
+      &:hover {
+        color: $deep_orange-500;
+      }
+    }
+  }
+}
+
+.img-responsive__app {
+  max-width: 632px;
+  width: 100%;
+  @media screen and (max-width: 1320px) {
+    width: 90%;
+  }
+  @include breakpoint(md) {
+    width: 85%;
+  }
+}
+
+.project {
+  &-md {
+    max-width: 493px;
+    @media screen and (max-width: 1226px) {
+      max-width: 630px;
+    }
+  }
+  &-sm {
+    max-width: 450px;
+    @media screen and (max-width: 1226px) {
+      max-width: 630px;
+    }
+  }
+  &-lg {
+    max-width: 520px;
+    @media screen and (max-width: 1226px) {
+      max-width: 630px;
+    }
+  }
+  &__h2 {
+    max-width: 493px;
+    margin-bottom: 30px;
+    @include breakpoint(xl) {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include breakpoint(lg) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    @include breakpoint(md) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @include breakpoint(sm) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+  &__txt {
+    margin-bottom: 30px;
+    @include breakpoint(md) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @include breakpoint(sm) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+}
+
+.link {
+  color: $black;
+  &:hover {
+    color: $deep_orange-500;
+  }
+  @include breakpoint(md) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @include breakpoint(sm) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+/* section-apps-project (second) styling*/
+
+/* section-localise (third) styling*/
+
+.section-localise {
+  background-color: $amber-50;
+  padding: 120px 0 147px;
+  @include breakpoint(md) {
+    padding: 70px 0;
+  }
+  &__title {
+    margin-bottom: 72px;
+    @include breakpoint(xl) {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include breakpoint(lg) {
+      font-size: 45px;
+      line-height: 50px;
+      text-align: center;
+    }
+    @include breakpoint(md) {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 40px;
+    }
+    @include breakpoint(sm) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+  &__icon {
+    margin-bottom: 26px;
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+      width: 40%;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+.icon-apps {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 125px;
+  @include breakpoint(lg) {
+    gap: 100px;
+  }
+  @include breakpoint(md) {
+    gap: 50px;
+  }
+}
+
+.icon-apps__card {
+  &-lg {
+    max-width: 330px;
+    width: 100%;
+    @include breakpoint(md) {
+      max-width: 320px;
+    }
+  }
+  &-md {
+    max-width: 320px;
+    width: 100%;
+  }
+  &-exmd {
+    max-width: 303px;
+    width: 100%;
+    @include breakpoint(md) {
+      max-width: 320px;
+    }
+  }
+  &-sm {
+    max-width: 281px;
+    width: 100%;
+    @include breakpoint(md) {
+      max-width: 320px;
+    }
+  }
+}
+
+/* section-localise (third) styling*/
+
+/*section-team-productivity (forth) styling*/
+
+.section-team-productivity {
+  padding: 154px 0 217px;
+  display: flex;
+  @media screen and (max-width: 1320px) {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  @include breakpoint(lg) {
+    padding: 100px 0;
+  }
+  @include breakpoint(md) {
+    padding: 80px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 60px 0;
+  }
+
+  &__card {
+    max-width: 409px;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 31px;
+    }
+    &__title {
+      margin-bottom: 72px;
+    }
+    &-subtitle {
+      margin-bottom: 34px;
+      @include breakpoint(md) {
+        margin-bottom: 24px;
+      }
+    }
+    &-txt {
+      margin-bottom: 25px;
+      @include breakpoint(md) {
+       font-size: 18px;
+       line-height: 28px;
+      }
+    }
+  }
+}
+
+.section-team-productivity__title {
+  @include breakpoint(xl) {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  @include breakpoint(lg) {
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+  }
+  @include breakpoint(md) {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  @include breakpoint(sm) {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+.section-team-productivity__card {
+  &-managers {
+    margin: 75px 0 49px;
+    @include breakpoint(md) {
+      margin: 50px 0 30px;
+      width: 35%;
+    }
+  }
+  &-developers {
+    margin: 92px 0 67px;
+    @include breakpoint(md) {
+      margin: 30px 0;
+      width: 40%;
+    }
+  }
+  &-translators {
+    margin: 100px 0 70px;
+    @include breakpoint(md) {
+      margin: 30px 0;
+      width: 35%;
+    }
+  }
+}
+
+/*end of section-team-productivity (forth) styling*/
+
+/*section-revolut (fifth) styling*/
+
+.section-revolut {
+  background-color: $cyan-100;
+  padding: 0 0 105px;
+  @include breakpoint(lg) {
+    padding: 0 0 70px;
+  }
+
+  &__wrap {
+    @include flex;
+    gap: 59px;
+    @media screen and (max-width: 1320px) {
+      gap: 20px;
+    }
+    @media screen and (max-width: 1060px) {
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    margin: 63px 0 23px;
+    max-width: 920px;
+    width: 100%;
+    @media screen and (max-width: 1320px) {
+      max-width: 800px;
+    }
+    @include breakpoint(xl) {
+      max-width: 700px;
+      font-size: 25px;
+      line-height: 40px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 20px;
+      line-height: 35px;
+    }
+    @include breakpoint(md) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include breakpoint(sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media screen and (max-width: 350px) {
+      max-width: 300px;
+    }
+  }
+
+  &__image {
+    margin-top: 53px;
+    @media screen and (max-width: 1059px) {
+      margin-top: 20px;
+      width: 100%;
+    }
+}
+    &__txt {
+      margin-bottom: 14px;
+    }
+    &__icon {
+      @include breakpoint(sm) {
+      width: 22%;
+      }
+    }
+  
+}
+/*end of section-revolut (fifth) styling*/
+
+/*section-rating (sixth) styling*/
+
+.section-rating {
+  background-color: $beige;
+  padding: 90px 0 88px;
+  @include breakpoint(lg) {
+    padding: 80px;
+  }
+  @include breakpoint(md) {
+    padding: 70px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 60px 0;
+  }
+  &__wrap {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(md) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.section-rating {
+  &__txt {
+    max-width: 652px;
+    border-right: 1px solid $black;
+    padding: 34px 124px 34px 67px;
+    @media screen and (max-width: 1275px) {
+      padding: 34px 15px 34px 67px;
+      max-width: 528px;
+    }
+    @include breakpoint(lg) {
+      max-width: 440px;
+      text-align: center;
+      font-size: 27px;
+      line-height: 45px;
+      padding: 0;
+      border: none;
+    }
+    
+    @media screen and (max-width: 610px) {
+margin-bottom: 15px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 25px;
+      line-height: 40px;
+
+    }
+    @include breakpoint(xs) {
+      font-size: 22px;
+      line-height: 30px;
+    } 
+  }
+  
+  &__text {
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    @include breakpoint(sm) {
+      font-size: 15px;
+    }
+  }
+  &__logo {
+    margin-bottom: 20px;
+    max-width: 36px;
+    @include breakpoint(sm) {
+      max-width: 28px;
+    }
+  }
+  &__logo-capterra {
+    margin-bottom: 20px;
+    max-width: 150px;
+    @include breakpoint(sm) {
+      max-width: 120px;
+    }
+  }
+  &__icon {
+    margin-bottom: 15px;
+    &-rate {
+      width: 20px;
+      @include breakpoint(sm) {
+        width: 16px;
+      }
+    }
+  }
+}
+.section-rating__logo-cake {
+  max-width: 176px;
+  @include breakpoint(lg) {
+    max-width: 140px;
+    margin-bottom: 15px;
+  }
+}
+.section-rating-wrap__star {
+  max-width: 128px;
+  margin: 0 71px 0;
+  @include breakpoint(md) {
+    margin: 0 40px 0 0;
+    width: 80%;
+  }
+  @media screen and (max-width: 323px) {
+    margin: 0 auto;
+  }
+}
+
+
+/*end of section-rating (sixth) styling*/
+
+/* section-work-tools (seventh) styling*/
+
+.section-work-tools {
+  @include flex;
+  padding: 165px 0 162px;
+  text-align: center;
+  @include breakpoint(xl) {
+    padding: 135px 0px;
+  }
+  @include breakpoint(lg) {
+    padding: 100px 0;
+  }
+  @include breakpoint(md) {
+    padding: 80px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 60px 0;
+  }
+  &__title {
+    max-width: 791px;
+    margin: 0 auto;
+    @include breakpoint(xl) {
+      font-size: 55px;
+      line-height: 60px;
+    }
+    @include breakpoint(lg) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @include breakpoint(md) {
+      font-size: 45px;
+      line-height: 55px;
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm) {
+      font-size: 40px;
+      line-height: 50px;
+  
+    }
+    @include breakpoint(xs) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+  &__text {
+    max-width: 539px;
+    margin: 0 auto 25px;
+
+    @include breakpoint(md) {
+      font-size: 22px;
+      line-height: 25px;
+    }
+    @include breakpoint(sm) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+/*end of section-work-tools (seventh) styling*/
+
+/*section-localozation (eighth) styling*/
+
+.section-localization {
+  display: flex;
+  padding: 119px 0 161px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: $red_a-100;
+  @include breakpoint(xl) {
+    padding: 116px 0px;
+  }
+  @include breakpoint(lg) {
+    padding: 80px 0;
+  }
+  @include breakpoint(md) {
+    padding: 70px 0;
+  }
+  @include breakpoint(sm) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    max-width: 784px;
+    margin-bottom: 29px;
+    @include breakpoint(xl) {
+      font-size: 55px;
+      line-height: 60px;
+    }
+    @include breakpoint(lg) {
+      font-size: 50px;
+      line-height: 60px;
+      max-width: 600px;
+    }
+    @include breakpoint(md) {
+      font-size: 45px;
+      line-height: 55px;
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @include breakpoint(xs) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+  &__text {
+    margin-bottom: 54px;
+  }
+}
+
+/*end of section-localozation (eighth) styling*/

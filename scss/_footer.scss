@@ -1,0 +1,153 @@
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* footer styling*/
+//top
+
+.footer {
+  background-color: $grey-200;
+}
+.footer-top {
+  display: flex;
+  &-wrap {
+    border-bottom: 1px solid $black;
+    padding-bottom: 95px;
+    @include breakpoint(sm) {
+      padding-bottom: 50px;
+    }
+  }
+  &__content {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 8.75rem;
+    @media screen and (max-width: 1300px) {
+      margin-right: 1.2rem;
+    }
+    @media screen and (max-width: 1152px) {
+      max-width: 400px;
+      text-align: center;
+     }
+     
+
+    &-title {
+      margin: 92px 0 28px;
+      @media screen and (max-width: 1152px) {
+        margin: 60px 0 28px;
+    }
+  }
+    &-img {
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 39px;
+      @include breakpoint(xl) {
+        max-width: 250px;
+        @media screen and (max-width: 1152px) {
+          max-width: 300px;
+        }
+      }
+    }
+    &-logo {
+      margin-bottom: 11px;
+    }
+    &-txt {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+.footer {
+  &__nav {
+    @include flex;
+    @media screen and (max-width: 1152px) {
+      flex: 0 0 50%;
+      justify-content: center;
+    }
+    @media screen and (max-width: 870px) {
+      flex: 0 0 100%;
+    }
+    &-col {
+      max-width: 176px;
+       }
+    &-col_last {
+      max-width: 176px;
+      @include breakpoint(md) {
+      margin-right: 30px;
+      }
+    }
+    &-title {
+      margin: 97px 0 21px;
+      @media screen and (max-width: 1152px) {
+        margin: 50px 0 15px;
+      }
+
+    }
+    &-product {
+      margin-right: 6.8rem;
+      @media screen and (max-width: 1300px) {
+        margin-right: 5.5rem;
+      }
+  }
+    &-support {
+      margin-right: 3.2rem;
+      @media screen and (max-width: 1300px) {
+        margin-right: 2.5rem;
+      }
+    }
+    &-company {
+      margin-right: 3.9rem;
+      @media screen and (max-width: 1300px) {
+        margin-right: 3.25rem;
+      }
+    }
+  }
+}
+
+.footer__nav-list {
+  &-link {
+    display: flex;
+    color: $black;
+    margin-bottom: 15px;
+    &:hover {
+      color: $deep_orange-500;
+    }
+  }
+}
+
+// bottom
+
+.footer-bottom {
+  align-items: center;
+  padding: 42px 0 53px;
+  display: flex;
+
+}
+
+.footer-bottom__logo {
+  @include flex;
+  align-items: center;
+  gap: 14px;
+  &-img:hover {
+    scale: 1.1;
+  }
+  &-txt {
+    max-width: 301px;
+  }
+}
+
+.footer-bottom__text-year {
+  @include breakpoint(sm) {
+    margin: 10px 0 0;
+  }
+}
+
+.footer-bottom__text-rights {
+  margin-right: 79px;
+  @include breakpoint(md) {
+    margin-right: 15px;
+  }
+}
+
+/*end of footer styling*/
